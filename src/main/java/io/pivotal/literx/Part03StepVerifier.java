@@ -55,7 +55,8 @@ public class Part03StepVerifier {
 
 	// TODO Expect 10 elements then complete and notice how long the test takes.
 	void expect10Elements(Flux<Long> flux) {
-		fail();
+		flux.subscribe(System.out::println);
+		//fail();
 	}
 
 //========================================================================================

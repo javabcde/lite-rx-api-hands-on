@@ -58,6 +58,7 @@ public class Part01FluxTest {
 	@Test
 	public void countEach100ms() {
 		Flux<Long> flux = workshop.counter();
+		System.out.println("===="+flux);
 		StepVerifier.create(flux)
 				.expectNext(0L, 1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L)
 				.verifyComplete();
